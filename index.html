@@ -4,13 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="马学敏的个人主页 - 电子信息类本科生" />
-    <meta name="theme-color" content="#0a0a14" />
+    <meta name="theme-color" content="#070d16" />
+    <script>
+      // 首屏脚本：在样式生效前定好主题，避免「先闪深色、再切浅色」
+      ;(function () {
+        try {
+          var t = localStorage.getItem('cc-theme')
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+          }
+          document.documentElement.dataset.theme = t
+          var meta = document.querySelector('meta[name="theme-color"]')
+          if (meta) meta.setAttribute('content', t === 'light' ? '#f6f1e7' : '#070d16')
+        } catch (e) {}
+      })()
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
     <title>马学敏 · 个人主页</title>
-    <script type="module" crossorigin src="/assets/index-BJl0LmwM.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BvtT6yAR.css">
+    <script type="module" crossorigin src="/assets/index-Da2HDCcF.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-O-coVyPb.css">
   </head>
   <body>
     <div id="root"></div>
