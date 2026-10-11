@@ -1,0 +1,4 @@
+# 仓库内一律存 LF，避免 Windows 上出现「内容没改但 git 说全变了」的假 diff
+* text=auto eol=lf
+*.jpg binary
+*.woff2 binary
