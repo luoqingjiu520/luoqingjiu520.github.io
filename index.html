@@ -7,9 +7,11 @@
     <meta name="theme-color" content="#070d16" />
     <script>
       // 首屏脚本：在样式生效前定好主题，避免「先闪深色、再切浅色」
+      // 支持 ?theme=light|dark 临时指定（用于分享/截图），不写入存储
       ;(function () {
         try {
-          var t = localStorage.getItem('cc-theme')
+          var q = /[?&]theme=(light|dark)/.exec(location.search)
+          var t = q ? q[1] : localStorage.getItem('cc-theme')
           if (t !== 'light' && t !== 'dark') {
             t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
           }
@@ -23,8 +25,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
     <title>马学敏 · 个人主页</title>
-    <script type="module" crossorigin src="/assets/index-Da2HDCcF.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-O-coVyPb.css">
+    <script type="module" crossorigin src="/assets/main-CMMoRd6C.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/index-DnqTVk3S.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-Dotijks8.css">
   </head>
   <body>
     <div id="root"></div>
