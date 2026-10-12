@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>荒原第四夜</title>
+<title>荒原</title>
 <style>
 /* base.css — 设计变量/字体/木漆鎏金基底（江湖风云录风）。时辰换色由 body[data-lut] 驱动。 */
 :root {
@@ -1244,7 +1244,7 @@ body[data-lut="blood"] .tk.me-tk { filter: brightness(1.8); }
 <body data-lut="dawn">
 
 <header id="topbar">
-    <div class="brand">荒原第四夜</div>
+    <div class="brand">荒原</div>
     <div id="phaseTag"></div>
     <div id="meterTag"></div>
     <div id="axes"></div>
@@ -6406,7 +6406,7 @@ window.CONTENT = {
     'use strict';
     const adapter = root.LlmAdapter;
 
-    const RULES = '你在为推理游戏《荒原第四夜》就地开展剧情。推理游戏法则，逐条遵守：' +
+    const RULES = '你在为推理游戏《荒原》就地开展剧情。推理游戏法则，逐条遵守：' +
         '一、线索—假设—验证闭环：只写已经发生的事（发现、声响、行踪、反应），不替玩家归纳假设、不下结论、不剧透；' +
         '二、逻辑树：树根是"那条人命是谁做的"，你的每一句只许挂在既定树枝上（物证/行踪/证言），不得引入新的案件事实；' +
         '三、本格公平：真相必须能从线索推导出来，禁写指向任何具体人物的定性语（"他最可疑"一类），' +
@@ -6597,7 +6597,7 @@ window.CONTENT = {
         '不得添新事件、不得改事实（人名、地点、时辰、数字一字不动），不得添任何死亡字眼（除非原句本来就有），' +
         '不得出现英文。只输出一句话，不加引号和前缀。';
     /* R109 终局指控分析：只依据参与投票的证据说话，不许替凶手建档（动机/秘密/习惯一概不复述） */
-    const RECAP_SYS = '你在为推理游戏《荒原第四夜》写结案的指控分析。终局会议上玩家起票指控，' +
+    const RECAP_SYS = '你在为推理游戏《荒原》写结案的指控分析。终局会议上玩家起票指控，' +
         '下面只给你【参与投票的证据】。请只依据这些证据，分析为什么它们足以指控被指控者：' +
         '哪条是硬证、哪条是旁证、它们怎样互相印证；伪造或对不上的证据要说清为什么不算数。' +
         '只许照抄素材里的人名与字句，不得引入证据之外的新事实，' +
