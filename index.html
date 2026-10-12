@@ -12,9 +12,8 @@
         try {
           var q = /[?&]theme=(light|dark)/.exec(location.search)
           var t = q ? q[1] : localStorage.getItem('cc-theme')
-          if (t !== 'light' && t !== 'dark') {
-            t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
-          }
+          // 默认深空（原风格）——不跟随系统；只有手动点过主题按钮才用米纸浅色
+          if (t !== 'light' && t !== 'dark') t = 'dark'
           document.documentElement.dataset.theme = t
           var meta = document.querySelector('meta[name="theme-color"]')
           if (meta) meta.setAttribute('content', t === 'light' ? '#f6f1e7' : '#070d16')
